@@ -29,8 +29,9 @@ export default async function Home() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      <Hero /> 
       <CategoryGrid />
+      <Hero /> 
+
       
       {/* Átadjuk a valódi, aktív termékeket a listának */}
       <ProductList products={JSON.parse(JSON.stringify(activeProducts))} />
