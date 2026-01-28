@@ -1,3 +1,4 @@
+// app/managerepository/inventory/InventoryClient.tsx
 "use client";
 
 import { useState } from "react";

@@ -1,3 +1,4 @@
+// app/managerepository/visibility/VisibilityClient.tsx
 "use client";
 
 import { useState } from "react";

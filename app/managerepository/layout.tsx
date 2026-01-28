@@ -1,3 +1,4 @@
+// app/managerepository/layout.tsx
 import Sidebar from "../components/admin/Sidebar";
 
 export default function AdminLayout({

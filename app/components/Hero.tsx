@@ -1,3 +1,4 @@
+// app/components/Hero.tsx
 export default function Hero() {
   return (
     <section className="relative w-full h-[80vh] bg-gray-900 overflow-hidden text-white">

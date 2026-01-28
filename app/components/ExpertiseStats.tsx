@@ -1,3 +1,4 @@
+// app/components/ExpertiseStats.tsx
 export default function ExpertiseStats() {
     return (
       <section className="py-24 bg-white border-y border-gray-200">

@@ -1,3 +1,4 @@
+// models/Product.ts
 import mongoose, { Schema, model, models } from "mongoose";
 
 const ProductSchema = new Schema({

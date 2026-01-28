@@ -1,3 +1,4 @@
+// app/components/CategoryGrid.tsx
 import Link from "next/link";
 
 const categories = [

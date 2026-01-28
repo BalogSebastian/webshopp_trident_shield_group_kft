@@ -1,3 +1,4 @@
+// app/page.tsx
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero"; 
 import CategoryGrid from "./components/CategoryGrid"; 

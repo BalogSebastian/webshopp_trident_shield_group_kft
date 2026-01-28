@@ -1,3 +1,4 @@
+// app/login/page.tsx
 import Link from "next/link";
 
 export default function LoginPage() {

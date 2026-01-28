@@ -1,3 +1,4 @@
+// app/components/Testimonials.tsx
 import { reviews } from "@/lib/data"; // Adat importálása
 
 export default function Testimonials() {

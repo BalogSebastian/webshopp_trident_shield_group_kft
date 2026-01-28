@@ -1,3 +1,4 @@
+// app/components/PromoSection.tsx
 import Link from "next/link";
 
 export default function PromoSection() {

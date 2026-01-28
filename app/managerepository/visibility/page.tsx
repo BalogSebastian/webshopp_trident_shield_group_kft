@@ -1,3 +1,4 @@
+// app/managerepository/visibility/page.tsx
 import { connectDB } from "@/lib/db";
 import Product from "@/models/Product";
 import VisibilityClient from "./VisibilityClient";

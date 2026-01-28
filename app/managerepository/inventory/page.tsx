@@ -1,3 +1,4 @@
+// app/managerepository/inventory/page.tsx
 import { connectDB } from "@/lib/db";
 import Product from "@/models/Product";
 import InventoryClient from "./InventoryClient"; // Ezt mindjárt megcsináljuk!
