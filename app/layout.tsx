@@ -1,24 +1,29 @@
-// app/layout.tsx
 import type { Metadata } from "next";
-import { Inter } from "next/font/google"; // Modern, tiszta betűtípus
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-// Betűtípus konfigurálása
+// IMPORTÁLJUK BE AZ ÚJ KOMPONENST
+import AutoLogout from "./components/AutoLogout"; 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Munkavédelmi Műszaki Webshop | Profi Felszerelések",
-  description: "Minőségi munkavédelmi ruházat, bakancsok és eszközök széles választéka. Ingyenes szállítás és garancia.",
+  title: "Munkavédelem Webshop",
+  description: "Prémium munkavédelmi eszközök",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="hu">
-      <body className={`${inter.className} antialiased bg-white text-black`}>
+      <body className={inter.className}>
+        
+        {/* IDE TESSZÜK BE, HOGY MINDIG FUSSON */}
+        <AutoLogout />
+        
         {children}
       </body>
     </html>
