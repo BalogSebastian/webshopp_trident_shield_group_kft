@@ -1,11 +1,12 @@
-// app/managerepository/page.tsx
 import { connectDB } from "@/lib/db";
 import Order from "@/models/Order";
 
+// Cache kikapcsolása, hogy mindig a friss adatot lásd
 export const dynamic = "force-dynamic";
 
 export default async function OrdersPage() {
   await connectDB();
+  // Lekérjük a rendeléseket időrendben (legújabb elöl)
   const orders = await Order.find().sort({ createdAt: -1 });
 
   return (
