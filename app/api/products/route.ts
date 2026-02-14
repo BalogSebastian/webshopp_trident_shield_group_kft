@@ -3,6 +3,20 @@ import { NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import Product from "@/models/Product";
 
+// TERMÉKEK LEKÉRÉSE (GET)
+export async function GET() {
+  try {
+    await connectDB();
+    
+    // Összes termék lekérése
+    const products = await Product.find().sort({ _id: -1 });
+    
+    return NextResponse.json(products);
+  } catch (error) {
+    return NextResponse.json({ success: false, error: "Hiba a termékek lekérésekor" }, { status: 500 });
+  }
+}
+
 // ÚJ TERMÉK HOZZÁADÁSA (POST)
 export async function POST(req: Request) {
   try {
