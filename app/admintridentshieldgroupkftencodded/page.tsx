@@ -647,6 +647,7 @@ export default function AdminTridentShieldGroupKftEncoddedDashboard() {
             <a href="/admintridentshieldgroupkftencodded/purchases" className="px-3 py-2 bg-gray-900 text-white rounded text-xs font-bold">Beszerzés oldal</a>
             <a href="/admintridentshieldgroupkftencodded/sales" className="px-3 py-2 bg-gray-900 text-white rounded text-xs font-bold">Értékesítés oldal</a>
             <a href="/admintridentshieldgroupkftencodded/inventory" className="px-3 py-2 bg-gray-900 text-white rounded text-xs font-bold">Készlet oldal</a>
+            <a href="/adminloggedinuserslistforfacts" className="px-3 py-2 bg-blue-600 text-white rounded text-xs font-bold">Felhasználók</a>
           </div>
         </div>
       </div>
