@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import mongoose from 'mongoose';
 import Purchase from '@/models/Purchase';
+import Product from '@/models/Product';
 
 // GET - Összes beszerzés lekérése
 export async function GET() {
@@ -96,6 +97,25 @@ export async function POST(request: NextRequest) {
     });
 
     await purchase.save();
+    if (sku) {
+      const product = await Product.findOne({ sku }).lean();
+      if (product) {
+        await Product.findByIdAndUpdate(
+          (product as unknown as { _id: { toString(): string } })._id,
+          { $inc: { stock: Number(quantity) } }
+        );
+      } else {
+        await Product.create({
+          name: productName,
+          category: 'Import',
+          price: Number(netUnitPrice),
+          stock: Number(quantity),
+          sku,
+          image: 'https://via.placeholder.com/150',
+          isActive: true,
+        });
+      }
+    }
 
     return NextResponse.json({
       success: true,

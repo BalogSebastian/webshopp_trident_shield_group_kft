@@ -1,7 +1,20 @@
+import AnnouncementBar from "./components/AnnouncementBar";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero"; 
 import CategoryGrid from "./components/CategoryGrid"; 
 import ProductList from "./components/ProductList";
+import CtaSection from "./components/CtaSection";
+import TrustBadges from "./components/TrustBadges";
+import FeaturesGrid from "./components/FeaturesGrid";
+import StickyCtaBar from "./components/StickyCtaBar";
+import BrandsMarquee from "./components/BrandsMarquee";
+import BestSellers from "./components/BestSellers";
+import ContactStrip from "./components/ContactStrip";
+import SaleBanner from "./components/SaleBanner";
+import SplitHero from "./components/SplitHero";
+import BannerGrid from "./components/BannerGrid";
+import GalleryStrip from "./components/GalleryStrip";
+import MosaicBanners from "./components/MosaicBanners";
 import PromoSection from "./components/PromoSection";
 import Testimonials from "./components/Testimonials";
 import Footer from "./components/Footer";
@@ -46,15 +59,27 @@ export default async function Home() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Átadjuk a user-t a Navbarnak! */}
+      <AnnouncementBar />
       <Navbar user={user} />
       
       <CategoryGrid />
       <Hero /> 
+      <SaleBanner />
+      <TrustBadges />
+      <BrandsMarquee />
+      <SplitHero />
+      <CtaSection />
+      <FeaturesGrid />
+      <BannerGrid />
+      <MosaicBanners />
+      <GalleryStrip />
+      <BestSellers products={JSON.parse(JSON.stringify(activeProducts))} />
       <ProductList products={JSON.parse(JSON.stringify(activeProducts))} />
       <PromoSection />
+      <ContactStrip />
       <Testimonials />
       <Footer />
+      <StickyCtaBar />
     </main>
   );
 }

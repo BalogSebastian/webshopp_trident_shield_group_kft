@@ -83,12 +83,22 @@ export default function Footer() {
             <div>
                 <h4 className="font-bold text-xs tracking-[0.2em] uppercase text-gray-400 mb-6">Infó</h4>
                 <ul className="flex flex-col gap-3">
-                    {['Rólunk', 'Kapcsolat', 'Szállítási infók', 'Adatvédelem', 'Karrier'].map((item) => (
-                        <li key={item}>
-                            <Link href="#" className="text-sm font-bold uppercase hover:text-blue-600 hover:pl-2 transition-all duration-300 block">
-                                {item}
-                            </Link>
-                        </li>
+                    <li>
+                      <Link href="/faq" className="text-sm font-bold uppercase hover:text-blue-600 hover:pl-2 transition-all duration-300 block">
+                        Rólunk
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href="/contact" className="text-sm font-bold uppercase hover:text-blue-600 hover:pl-2 transition-all duration-300 block">
+                        Kapcsolat
+                      </Link>
+                    </li>
+                    {['Szállítási infók', 'Adatvédelem', 'Karrier'].map((item) => (
+                      <li key={item}>
+                        <Link href="#" className="text-sm font-bold uppercase hover:text-blue-600 hover:pl-2 transition-all duration-300 block">
+                          {item}
+                        </Link>
+                      </li>
                     ))}
                 </ul>
             </div>

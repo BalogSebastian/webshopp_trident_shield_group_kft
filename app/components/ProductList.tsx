@@ -1,7 +1,7 @@
 // app/components/ProductList.tsx
 import Link from "next/link";
 
-export default function ProductList({ products }: { products: any[] }) {
+export default function ProductList({ products }: { products: Array<{ _id: string; name: string; category?: string; price: number; stock: number; image?: string }> }) {
   // Debuggolás: Nézd meg a böngésző konzolban (F12), hogy mi érkezik ide!
   console.log("Webshopba érkező termékek:", products);
 
@@ -10,7 +10,7 @@ export default function ProductList({ products }: { products: any[] }) {
     return (
       <section className="px-8 py-24 bg-white border-b border-gray-100 text-center">
         <h2 className="text-2xl font-black uppercase text-gray-300 mb-4">Jelenleg nincs elérhető termék.</h2>
-        <p className="text-gray-400 text-sm">Nézz vissza később, vagy állítsd be a termékeket "Aktív"-ra az adminban.</p>
+        <p className="text-gray-400 text-sm">Nézz vissza később, vagy állítsd be a termékeket &quot;Aktív&quot;-ra az adminban.</p>
       </section>
     )
   }
